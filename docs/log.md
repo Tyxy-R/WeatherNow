@@ -40,3 +40,5 @@
 >* 进行仓库的服务器部署
 ## 2024.11.14 commit 16
 >* 新增 SoftwareArchitecture.md 文档
+## 2024.11.14 commit 17
+>* 修复因部署导致的时区问题

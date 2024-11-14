@@ -30,7 +30,7 @@ def main():
     # 初始化全局配置
     if st.session_state.first_visit:
         # 在这里可以定义任意多个全局变量，方便程序进行调用
-        st.session_state.date_time=datetime.datetime.now() # Streamlit Cloud的时区是UTC，加8小时即北京时间
+        st.session_state.date_time=datetime.datetime.now()+datetime.timedelta(hours=8) # Streamlit Cloud的时区是UTC，加8小时即北京时间
         st.session_state.random_chart_index=random.choice(range(len(charts_mapping)))
         st.session_state.my_random=MyRandom(random.randint(1,1000000))
         st.session_state.city_mapping,st.session_state.random_city_index=get_city_mapping() 
@@ -136,14 +136,14 @@ def get_city_weather(cityId,cityName):
         realFeel=f"{result['condition']['realFeel']}°C",
         weather=result['condition']['weather'],
         wind=f"{result['condition']['windDir']}{result['condition']['windLevel']}级",
-        updateTime=(datetime.datetime.fromtimestamp(result['condition']['updateTime'])).strftime('%H:%M:%S')
+        updateTime=(datetime.datetime.fromtimestamp(result['condition']['updateTime'])+datetime.timedelta(hours=8)).strftime('%H:%M:%S')
     )
 
     # 24 hours forecast
     forecastHours=[]
     for i in result['forecastHours']['forecastHour']:
         tmp={}
-        tmp['PredictTime']=(datetime.datetime.fromtimestamp(i['predictTime'])).strftime('%H:%M')
+        tmp['PredictTime']=(datetime.datetime.fromtimestamp(i['predictTime'])+datetime.timedelta(hours=8)).strftime('%H:%M')
         tmp['Temperature']=i['temp']
         tmp['Body Temperature']=i['realFeel']
         tmp['Humidity']=i['humidity']

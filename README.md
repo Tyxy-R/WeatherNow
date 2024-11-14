@@ -17,7 +17,7 @@
     <a href="https://github.com/admin1025/WeatherNow"><strong>浏览文档 »</strong></a>
     <br />
     <br />
-    <a href="https://weathernowpublic.streamlit.app/">🔗查看 Demo</a>
+    <a href="https://weathernow-android.streamlit.app/">🔗查看 Demo</a>
     ·
     <a href="https://github.com/admin1025/WeatherNow/issues">反馈 Bug</a>
     ·
@@ -45,7 +45,7 @@ GitHub 上有很多优秀的关于天气预测的 Repository ，但都是基于�
 当然，没有一个Repository可以满足所有人的要求，因为你的需求可能与众不同。所以我们会在未来添加更多内容。你也可以通过复刻（fork）本仓库并且创建一个拉取请求（pull request）或者创建议题（issue）来向我们提出建议。感谢所有帮助我们扩充本仓库的贡献者！
 
 
-如果你对我的网站感兴趣，欢迎访问我的线上网站[🌦️Weather Now](https://weathernowpublic.streamlit.app/) 来开始。
+如果你对我的网站感兴趣，欢迎访问我的线上网站[🌦️Weather Now](https://weathernow-android.streamlit.app/) 来开始。
 
 [toc]
 
