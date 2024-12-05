@@ -15,7 +15,7 @@ from src.socket import find
 
 def main():
     global df_forecastDays
-    st.set_page_config(page_title="天气预报",page_icon=":rainbow:",layout="wide",initial_sidebar_state="auto")
+    st.set_page_config(page_title="天气预报",page_icon=":rainbow:",layout="centered",initial_sidebar_state="auto")
     st.title('天气预报:heart:')
     st.markdown('<br>',unsafe_allow_html=True)
     st.markdown('<br>',unsafe_allow_html=True)
@@ -88,7 +88,11 @@ def main():
             .set_series_opts(label_opts=opts.LabelOpts(is_show=True,formatter=JsCode("function(x){return x.data[1] + '°C';}")))
         )
 
-        t = Timeline(init_opts=opts.InitOpts(theme=ThemeType.LIGHT,width='1000px'))
+<<<<<<< HEAD
+        t = Timeline(init_opts=opts.InitOpts(theme=ThemeType.LIGHT,width='600px'))
+=======
+        t = Timeline(init_opts=opts.InitOpts(theme=ThemeType.LIGHT))
+>>>>>>> 837fe55c7c01b2e28d828803bb946efc1f633c68
         t.add_schema(play_interval=10000,is_auto_play=True)
         t.add(c1, "24 Hours Forecast")
         t.add(c2, "7 Days Forecast")
